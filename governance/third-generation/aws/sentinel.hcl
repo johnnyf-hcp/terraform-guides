@@ -98,7 +98,7 @@ policy "restrict-ingress-sg-rule-cidr-blocks" {
   source = "./restrict-ingress-sg-rule-cidr-blocks.sentinel"
   enforcement_level = "soft-mandatory"
 }
-*/
+/*
 policy "restrict-ingress-sg-rule-rdp" {
   source = "./restrict-ingress-sg-rule-rdp.sentinel"
   enforcement_level = "advisory"
@@ -108,7 +108,7 @@ policy "restrict-ingress-sg-rule-ssh" {
   source = "./restrict-ingress-sg-rule-ssh.sentinel"
   enforcement_level = "soft-mandatory"
 }
-x
+
 policy "restrict-launch-configuration-instance-type" {
   source = "./restrict-launch-configuration-instance-type.sentinel"
   enforcement_level = "advisory"
