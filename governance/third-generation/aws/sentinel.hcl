@@ -13,7 +13,7 @@ module "tfconfig-functions" {
 module "aws-functions" {
   source = "./aws-functions/aws-functions.sentinel"
 }
-
+/*
 policy "enforce-mandatory-tags" {
   source = "./enforce-mandatory-tags.sentinel"
   enforcement_level = "advisory"
@@ -103,12 +103,12 @@ policy "restrict-ingress-sg-rule-rdp" {
   source = "./restrict-ingress-sg-rule-rdp.sentinel"
   enforcement_level = "advisory"
 }
-
+*/
 policy "restrict-ingress-sg-rule-ssh" {
   source = "./restrict-ingress-sg-rule-ssh.sentinel"
-  enforcement_level = "advisory"
+  enforcement_level = "soft-mandatory"
 }
-
+/*
 policy "restrict-launch-configuration-instance-type" {
   source = "./restrict-launch-configuration-instance-type.sentinel"
   enforcement_level = "advisory"
@@ -133,3 +133,4 @@ policy "validate-providers-from-desired-regions" {
   source = "./validate-providers-from-desired-regions.sentinel"
   enforcement_level = "advisory"
 }
+*/
