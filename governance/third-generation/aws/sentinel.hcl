@@ -109,12 +109,17 @@ policy "restrict-ingress-sg-rule-ssh" {
   enforcement_level = "soft-mandatory"
 }
 
+policy "limit-cost-by-workspace-type" {
+  source = "./limit-cost-by-workspace-type.sentinel"
+  enforcement_level = "hard-mandatory"
+}
+  
+/*
 policy "less-than-100-month" {
   source = "./less-than-100-month.sentinel"
   enforcement_level = "hard-mandatory"
 }
   
-/*
 policy "restrict-launch-configuration-instance-type" {
   source = "./restrict-launch-configuration-instance-type.sentinel"
   enforcement_level = "advisory"
