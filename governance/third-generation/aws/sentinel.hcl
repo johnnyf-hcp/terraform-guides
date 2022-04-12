@@ -14,11 +14,6 @@ module "aws-functions" {
   source = "./aws-functions/aws-functions.sentinel"
 }
 /*
-policy "enforce-mandatory-tags" {
-  source = "./enforce-mandatory-tags.sentinel"
-  enforcement_level = "advisory"
-}
-
 policy "protect-against-rds-instance-deletion" {
   source = "./protect-against-rds-instance-deletion.sentinel"
   enforcement_level = "advisory"
@@ -104,10 +99,21 @@ policy "restrict-ingress-sg-rule-rdp" {
   enforcement_level = "advisory"
 }
 */
+policy "enforce-mandatory-tags" {
+  source = "./enforce-mandatory-tags.sentinel"
+  enforcement_level = "advisory"
+}
+
 policy "restrict-ingress-sg-rule-ssh" {
   source = "./restrict-ingress-sg-rule-ssh.sentinel"
   enforcement_level = "soft-mandatory"
 }
+
+policy "less-than-100-month" {
+  source = "./less-than-100-month.sentinel"
+  enforcement_level = "hard-mandatory"
+}
+  
 /*
 policy "restrict-launch-configuration-instance-type" {
   source = "./restrict-launch-configuration-instance-type.sentinel"
